@@ -1,0 +1,51 @@
+{
+    "header": {
+        "status_init": "STATUS: INITIALIZING...",
+        "status_online": "STATUS: ONLINE",
+        "home": "HOME",
+        "specs": "SPECS",
+        "projects": "PROJECTS",
+        "logs": "LOGS"
+    },
+    "hero": {
+        "title": "MECHATRONICS\nENGINEER",
+        "subtitle": "// Merging Atoms with Bits",
+        "description": "Specialized in bridging the gap between mechanical systems, electronics, and software control. Architecting the physical internet through precision robotics and automation.",
+        "cta_init": "► INITIATE PROTOCOL",
+        "cta_blueprints": "VIEW BLUEPRINTS",
+        "stat_projects": "PROJECTS",
+        "stat_finalist": "TEKNOFEST FINALIST",
+        "stat_integration": "END-TO-END INTEGRATION"
+    },
+    "dashboard": {
+        "title": "SYSTEM_HEALTH_DASHBOARD",
+        "mech_eng": "MECHANICAL_ENG",
+        "elec_sys": "ELECTRONIC_SYS",
+        "soft_dev": "SOFTWARE_DEV",
+        "kpi_core_temp": "Core Temp",
+        "kpi_cpu_load": "CPU Load",
+        "kpi_latency": "Latency",
+        "kpi_system": "System"
+    },
+    "projects": {
+        "log01_title": "Autonomous Agricultural UGV",
+        "log01_desc": "Jetson Nano, OpenCV, Mechanical Design",
+        "log02_title": "Defense Industry UGV",
+        "log02_desc": "ROS, Geekom Mini PC, Full Assembly",
+        "log03_title": "Industrial Workshop Ops",
+        "log03_desc": "Lathe/CNC Operation, PLC Programming"
+    },
+    "logs": {
+        "timeline_title": "OPERATIONAL_LOGS",
+        "step1": "Manual Machining",
+        "step2": "CNC Operation",
+        "step3": "PLC Programming",
+        "step4": "Robotics Integration",
+        "step5": "AI & Computer Vision"
+    },
+    "footer": {
+        "terminal_title": "TERMINAL_WINDOW",
+        "send_email": "--send_email",
+        "connect_linkedin": "--connect_linkedin"
+    }
+}

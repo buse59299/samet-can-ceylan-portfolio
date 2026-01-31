@@ -1,0 +1,51 @@
+{
+    "header": {
+        "status_init": "DURUM: BAŞLATILIYOR...",
+        "status_online": "DURUM: ÇEVRİMİÇİ",
+        "home": "ANA SAYFA",
+        "specs": "ÖZELLİKLER",
+        "projects": "PROJELER",
+        "logs": "KAYITLAR"
+    },
+    "hero": {
+        "title": "MEKATRONİK\nMÜHENDİSİ",
+        "subtitle": "// Atomları Bitlerle Birleştirmek",
+        "description": "Mekanik sistemler, elektronik ve yazılım kontrolü arasındaki boşluğu doldurma konusunda uzmanlaşmıştır. Hassas robotik ve otomasyon yoluyla fiziksel interneti mimarisi.",
+        "cta_init": "► PROTOKOLÜ BAŞLAT",
+        "cta_blueprints": "TASLAKLARI GÖRÜNTÜLE",
+        "stat_projects": "PROJE",
+        "stat_finalist": "TEKNOFEST FİNALİSTİ",
+        "stat_integration": "UÇTAN UCA ENTEGRASYON"
+    },
+    "dashboard": {
+        "title": "SİSTEM_SAĞLIK_PANELİ",
+        "mech_eng": "MEKANİK_MÜH",
+        "elec_sys": "ELEKTRONİK_SİS",
+        "soft_dev": "YAZILIM_GEL",
+        "kpi_core_temp": "Çekirdek Isısı",
+        "kpi_cpu_load": "CPU Yükü",
+        "kpi_latency": "Gecikme",
+        "kpi_system": "Sistem"
+    },
+    "projects": {
+        "log01_title": "Otonom Tarımsal İKA",
+        "log01_desc": "Jetson Nano, OpenCV, Mekanik Tasarım",
+        "log02_title": "Savunma Sanayi İKA",
+        "log02_desc": "ROS, Geekom Mini PC, Tam Montaj",
+        "log03_title": "Endüstriyel Atölye Ops",
+        "log03_desc": "Torna/CNC Operasyonu, PLC Programlama"
+    },
+    "logs": {
+        "timeline_title": "OPERASYONEL_KAYITLAR",
+        "step1": "Manuel İşleme",
+        "step2": "CNC Operasyonu",
+        "step3": "PLC Programlama",
+        "step4": "Robotik Entegrasyon",
+        "step5": "YZ & Bilgisayarlı Görü"
+    },
+    "footer": {
+        "terminal_title": "TERMİNAL_PENCERESİ",
+        "send_email": "--eposta_gonder",
+        "connect_linkedin": "--linkedin_baglan"
+    }
+}
