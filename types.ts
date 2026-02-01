@@ -6,6 +6,7 @@ export interface Project {
   imageUrl: string;
   status: 'DEPLOYED' | 'CLASSIFIED' | 'v.1.0.4' | 'BETA';
   statusColor: string; // Tailwind color class for badge
+  videoUrl?: string; // Optional YouTube video link
 }
 
 export interface LogEntry {

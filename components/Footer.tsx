@@ -87,18 +87,52 @@ const Footer: React.FC = () => {
           <div className="bg-[#1a1a1a] p-4 border-t border-gray-800">
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={() => handleCommand(t('footer.send_email'), () => window.location.href = "mailto:contact@example.com")}
-                className="group flex items-center gap-2 text-gray-400 hover:text-neon-orange hover:bg-white/5 px-2 py-1 border border-transparent hover:border-neon-orange transition-all text-xs"
+                onClick={() => handleCommand("mail sametcanceylan@icloud.com", () => {
+                  setTimeout(() => {
+                    window.location.href = 'mailto:sametcanceylan@icloud.com';
+                  }, 100);
+                })}
+                disabled={isTyping}
+                className="group flex items-center gap-2 text-gray-400 hover:text-neon-orange hover:bg-white/5 px-2 py-1 border border-transparent hover:border-neon-orange transition-all text-xs cursor-pointer disabled:opacity-50"
               >
                 <span className="text-neon-orange opacity-0 group-hover:opacity-100">&gt;</span>
                 [ {t('footer.send_email')} ]
               </button>
               <button
-                onClick={() => handleCommand(t('footer.connect_linkedin'), () => openLink("#"))}
-                className="group flex items-center gap-2 text-gray-400 hover:text-neon-cyan hover:bg-white/5 px-2 py-1 border border-transparent hover:border-neon-cyan transition-all text-xs"
+                onClick={() => handleCommand("open https://github.com/MrDancheva", () => {
+                  setTimeout(() => {
+                    window.open('https://github.com/MrDancheva', '_blank');
+                  }, 100);
+                })}
+                disabled={isTyping}
+                className="group flex items-center gap-2 text-gray-400 hover:text-neon-cyan hover:bg-white/5 px-2 py-1 border border-transparent hover:border-neon-cyan transition-all text-xs cursor-pointer disabled:opacity-50"
               >
                 <span className="text-neon-cyan opacity-0 group-hover:opacity-100">&gt;</span>
-                [ {t('footer.connect_linkedin')} ]
+                [ --view_github ]
+              </button>
+              <button
+                onClick={() => handleCommand("open https://grabcad.com/samet.can.ceylan-1", () => {
+                  setTimeout(() => {
+                    window.open('https://grabcad.com/samet.can.ceylan-1', '_blank');
+                  }, 100);
+                })}
+                disabled={isTyping}
+                className="group flex items-center gap-2 text-gray-400 hover:text-neon-orange hover:bg-white/5 px-2 py-1 border border-transparent hover:border-neon-orange transition-all text-xs cursor-pointer disabled:opacity-50"
+              >
+                <span className="text-neon-orange opacity-0 group-hover:opacity-100">&gt;</span>
+                [ --view_grabcad ]
+              </button>
+              <button
+                onClick={() => handleCommand("open https://www.instagram.com/mrdancheva", () => {
+                  setTimeout(() => {
+                    window.open('https://www.instagram.com/mrdancheva', '_blank');
+                  }, 100);
+                })}
+                disabled={isTyping}
+                className="group flex items-center gap-2 text-gray-400 hover:text-neon-cyan hover:bg-white/5 px-2 py-1 border border-transparent hover:border-neon-cyan transition-all text-xs cursor-pointer disabled:opacity-50"
+              >
+                <span className="text-neon-cyan opacity-0 group-hover:opacity-100">&gt;</span>
+                [ --view_instagram ]
               </button>
             </div>
           </div>

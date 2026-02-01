@@ -1,0 +1,224 @@
+{
+  "en": {
+    "header": {
+      "status_init": "STATUS: INITIALIZING...",
+      "status_online": "STATUS: ONLINE",
+      "home": "HOME",
+      "specs": "SPECS",
+      "projects": "PROJECTS",
+      "logs": "LOGS",
+      "download_cv": "DOWNLOAD CV"
+    },
+    "hero": {
+      "title": "MECHATRONICS\nENGINEER",
+      "subtitle": "// Merging Atoms with Bits",
+      "description": "Specialized in bridging the gap between mechanical systems, electronics, and software control. Architecting the physical internet through precision robotics and automation.",
+      "cta_init": "► INITIATE PROTOCOL",
+      "cta_blueprints": "VIEW BLUEPRINTS",
+      "stat_projects": "PROJECTS",
+      "stat_finalist": "TEKNOFEST FINALIST",
+      "stat_integration": "END-TO-END INTEGRATION"
+    },
+    "dashboard": {
+      "title": "SYSTEM_HEALTH_DASHBOARD",
+      "mech_eng": "MECHANICAL_ENG",
+      "elec_sys": "ELECTRONIC_SYS",
+      "soft_dev": "SOFTWARE_DEV",
+      "kpi_core_temp": "Core Temp",
+      "kpi_cpu_load": "CPU Load",
+      "kpi_latency": "Latency",
+      "kpi_system": "System"
+    },
+    "projects": {
+      "title": "PROJECTS",
+      "rendering_count": "Rendering Objects",
+      "access_data": ">> ACCESS_DATA",
+      "items": [
+        {
+          "id": "1",
+          "title": "Autonomous Agricultural UGV (TIKA)",
+          "tags": ["Jetson Nano", "SolidWorks", "FEA Analysis", "3D Prototyping"],
+          "description": "Multi-layered autonomous system with Jetson Nano for deep learning vision processing. Features high-clearance aluminum chassis optimized for rough terrain, modular actuator mounting points, and lightweight 3D-printed components (PETG/Carbon Fiber) for strength-to-weight optimization.",
+          "imageUrl": "/5.jpg",
+          "status": "v.1.0.4",
+          "statusColor": "bg-neon-cyan"
+        },
+        {
+          "id": "2",
+          "title": "Defense Industry UGV",
+          "tags": ["Pixhawk Cube Plus", "Steel Fabrication", "Laser Cutting", "IP67 Protection"],
+          "description": "Defense-grade UGV with independent suspension system and dynamic chassis geometry. Body and chassis manufactured from high-strength steel sheet using precision laser cutting method, ensuring maximum strength and structural integrity in the field. Features IP67-rated sealed compartments and Pixhawk autopilot integration.",
+          "imageUrl": "/TeknofestİKA.jpg",
+          "status": "CLASSIFIED",
+          "statusColor": "bg-neon-orange",
+          "videoUrl": "https://youtu.be/IArDLnQdPVY"
+        },
+        {
+          "id": "3",
+          "title": "Industrial Workshop Operations",
+          "tags": ["Siemens PLC", "CNC/Lathe", "GD&T Analysis", "Fixture Design"],
+          "description": "CNC machining operations with GD&T tolerance analysis and precision fixture design. PLC-based automation systems optimizing production workflows, tool life extension through material science applications, and quality control process integration.",
+          "imageUrl": "/endüstriyelatölyevecnc.jpeg",
+          "status": "DEPLOYED",
+          "statusColor": "bg-neon-cyan"
+        }
+      ]
+    },
+    "logs": {
+      "timeline_title": "OPERATIONAL_LOGS",
+      "items": [
+        {
+          "id": "5",
+          "title": "AI & Computer Vision",
+          "color": "text-neon-cyan",
+          "dotColor": "bg-neon-cyan",
+          "border": "border-neon-cyan"
+        },
+        {
+          "id": "4",
+          "title": "Robotics Integration",
+          "color": "text-white",
+          "dotColor": "bg-white",
+          "border": "border-white"
+        },
+        {
+          "id": "3",
+          "title": "PLC Programming",
+          "color": "text-white",
+          "dotColor": "bg-white",
+          "border": "border-white"
+        },
+        {
+          "id": "2",
+          "title": "CNC Operation",
+          "color": "text-gray-400",
+          "dotColor": "bg-gray-500",
+          "border": "border-gray-500"
+        },
+        {
+          "id": "1",
+          "title": "Manual Machining",
+          "color": "text-gray-500",
+          "dotColor": "bg-gray-600",
+          "border": "border-gray-600"
+        }
+      ]
+    },
+    "footer": {
+      "terminal_title": "TERMINAL_WINDOW",
+      "send_email": "--send_email",
+      "connect_linkedin": "--connect_linkedin"
+    }
+  },
+  "tr": {
+    "header": {
+      "status_init": "DURUM: BAŞLATILIYOR...",
+      "status_online": "DURUM: ÇEVRİMİÇİ",
+      "home": "ANA SAYFA",
+      "specs": "ÖZELLİKLER",
+      "projects": "PROJELER",
+      "logs": "KAYITLAR",
+      "download_cv": "CV İNDİR"
+    },
+    "hero": {
+      "title": "MEKATRONİK\nMÜHENDİSİ",
+      "subtitle": "// Atomları Bitlerle Birleştirmek",
+      "description": "Mekanik sistemler, elektronik ve yazılım kontrolü arasındaki boşluğu doldurma konusunda uzmanlaşmıştır. Hassas robotik ve otomasyon yoluyla fiziksel internetin mimarisini kuruyor.",
+      "cta_init": "► PROTOKOLÜ BAŞLAT",
+      "cta_blueprints": "TASLAKLARI GÖRÜNTÜLE",
+      "stat_projects": "PROJE",
+      "stat_finalist": "TEKNOFEST FİNALİSTİ",
+      "stat_integration": "UÇTAN UCA ENTEGRASYON"
+    },
+    "dashboard": {
+      "title": "SİSTEM_SAĞLIK_PANELİ",
+      "mech_eng": "MEKANİK_MÜH",
+      "elec_sys": "ELEKTRONİK_SİS",
+      "soft_dev": "YAZILIM_GEL",
+      "kpi_core_temp": "Çekirdek Sıcaklığı",
+      "kpi_cpu_load": "CPU Yükü",
+      "kpi_latency": "Gecikme",
+      "kpi_system": "Sistem"
+    },
+    "projects": {
+      "title": "PROJELER",
+      "rendering_count": "Render Edilen Nesneler",
+      "access_data": ">> VERİYE_ERİŞ",
+      "items": [
+        {
+          "id": "1",
+          "title": "Otonom Tarımsal İKA (TİKA)",
+          "tags": ["Jetson Nano", "SolidWorks", "FEA Analiz", "3D Prototipleme"],
+          "description": "Jetson Nano ile derin öğrenme görüntü işleme destekli çok katmanlı otonom sistem. Engebeli arazi için yüksek iz genişlikli alüminyum şasi, modüler aktüatör bağlantı noktaları ve mukavemet/ağırlık optimizasyonu yapılmış 3D baskı (PETG/Carbon Fiber) kritik parçalar içerir.",
+          "imageUrl": "/5.jpg",
+          "status": "v.1.0.4",
+          "statusColor": "bg-neon-cyan"
+        },
+        {
+          "id": "2",
+          "title": "Savunma Sanayii İKA",
+          "tags": ["Pixhawk Cube Plus", "Çelik İmalat", "Lazer Kesim", "IP67 Koruma"],
+          "description": "Bağımsız süspansiyon sistemi ve dinamik şasi geometrisine sahip savunma seviyesi İKA. Gövde ve şasi yüksek dayanımlı çelik sacdan, hassas lazer kesim metodu kullanılarak imal edilmiştir. Bu sayede sahada maksimum mukavemet ve yapısal bütünlük sağlanmıştır. IP67 standartlarında sızdırmaz bölmeler ve Pixhawk otopilot entegrasyonu.",
+          "imageUrl": "/TeknofestİKA.jpg",
+          "status": "CLASSIFIED",
+          "statusColor": "bg-neon-orange",
+          "videoUrl": "https://youtu.be/IArDLnQdPVY"
+        },
+        {
+          "id": "3",
+          "title": "Endüstriyel Atölye Operasyonları",
+          "tags": ["Siemens PLC", "CNC/Torna", "GD&T Analiz", "Fikstür Tasarım"],
+          "description": "CNC talaşlı imalatta tolerans analizi (GD&T) ve hassas fikstür tasarımı. PLC tabanlı otomasyon sistemleri ile üretim iş akışlarının optimizasyonu, malzeme bilimi kullanılarak takım ömrünü optimize eden operasyonlar ve kalite kontrol süreçlerinin entegrasyonu.",
+          "imageUrl": "/endüstriyelatölyevecnc.jpeg",
+          "status": "DEPLOYED",
+          "statusColor": "bg-neon-cyan"
+        }
+      ]
+    },
+    "logs": {
+      "timeline_title": "OPERASYONEL_KAYITLAR",
+      "items": [
+        {
+          "id": "5",
+          "title": "Bilgisayarlı Görüntü İşleme",
+          "color": "text-neon-cyan",
+          "dotColor": "bg-neon-cyan",
+          "border": "border-neon-cyan"
+        },
+        {
+          "id": "4",
+          "title": "Robotik Entegrasyon",
+          "color": "text-white",
+          "dotColor": "bg-white",
+          "border": "border-white"
+        },
+        {
+          "id": "3",
+          "title": "PLC Programlama",
+          "color": "text-white",
+          "dotColor": "bg-white",
+          "border": "border-white"
+        },
+        {
+          "id": "2",
+          "title": "CNC Operasyonu",
+          "color": "text-gray-400",
+          "dotColor": "bg-gray-500",
+          "border": "border-gray-500"
+        },
+        {
+          "id": "1",
+          "title": "Manuel İşleme",
+          "color": "text-gray-500",
+          "dotColor": "bg-gray-600",
+          "border": "border-gray-600"
+        }
+      ]
+    },
+    "footer": {
+      "terminal_title": "TERMİNAL_PENCERESİ",
+      "send_email": "--eposta_gonder",
+      "connect_linkedin": "--linkedin_baglan"
+    }
+  }
+}

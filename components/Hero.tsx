@@ -43,10 +43,16 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.9, duration: 0.5 }}
             className="flex flex-wrap gap-4 pt-4"
           >
-            <button className="btn-tech bg-neon-cyan text-black px-8 py-3 font-bold tracking-wider hover:bg-white transition-colors">
+            <button 
+              onClick={() => document.getElementById('specs')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-tech bg-neon-cyan text-black px-8 py-3 font-bold tracking-wider hover:bg-white transition-colors cursor-pointer"
+            >
               {t('hero.cta_init')}
             </button>
-            <button className="btn-tech border border-neon-cyan text-neon-cyan px-8 py-3 font-bold tracking-wider hover:bg-neon-cyan/10 transition-colors">
+            <button 
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-tech border border-neon-cyan text-neon-cyan px-8 py-3 font-bold tracking-wider hover:bg-neon-cyan/10 transition-colors cursor-pointer"
+            >
               {t('hero.cta_blueprints')}
             </button>
           </motion.div>
@@ -95,7 +101,7 @@ const Hero: React.FC = () => {
             <img
               alt="Robotic Arm Prototype"
               className="w-full h-auto object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500"
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="/ana.jpeg"
               style={{ maxHeight: '400px' }}
             />
             {/* Scanning Line Animation */}

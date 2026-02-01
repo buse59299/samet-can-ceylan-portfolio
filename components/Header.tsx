@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Download } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const Header: React.FC = () => {
-  const { t, i18n } = useTranslation();
+interface HeaderProps {
+  lang: 'en' | 'tr';
+  onLanguageChange: (lang: 'en' | 'tr') => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ lang, onLanguageChange }) => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +16,8 @@ const Header: React.FC = () => {
   };
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'tr' : 'en');
+    const newLang = lang === 'en' ? 'tr' : 'en';
+    onLanguageChange(newLang);
   };
 
   const navItems = [
@@ -45,23 +51,40 @@ const Header: React.FC = () => {
               ))}
             </ul>
 
+            {/* CV Download Button */}
+            <a
+              href="/CV.pdf"
+              download
+              className="flex items-center gap-2 px-4 py-2 bg-neon-cyan/10 border border-neon-cyan hover:bg-neon-cyan hover:text-black text-neon-cyan text-xs transition-all uppercase tracking-wider font-semibold"
+            >
+              <Download className="w-4 h-4" />
+              {t('header.download_cv')}
+            </a>
+
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 px-3 py-1 border border-white/20 hover:border-neon-cyan text-xs text-gray-300 hover:text-neon-cyan transition-all uppercase tracking-wider bg-black/50"
             >
               <Globe className="w-3 h-3" />
-              {i18n.language === 'en' ? 'TR' : 'EN'}
+              {lang === 'en' ? 'TR' : 'EN'}
             </button>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
+            <a
+              href="/CV.pdf"
+              download
+              className="flex items-center gap-1 px-2 py-1 border border-neon-cyan text-neon-cyan text-xs uppercase tracking-wider"
+            >
+              <Download className="w-3 h-3" />
+            </a>
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-1 px-2 py-1 border border-white/20 text-xs text-gray-300 uppercase tracking-wider"
             >
-              {i18n.language === 'en' ? 'TR' : 'EN'}
+              {lang === 'en' ? 'TR' : 'EN'}
             </button>
             <button
               onClick={toggleMenu}

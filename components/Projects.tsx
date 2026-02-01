@@ -1,46 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Project } from '../types';
 import { motion } from 'framer-motion';
+import { Youtube } from 'lucide-react';
 
 const Projects: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [projects, setProjects] = useState<Project[]>([]);
 
-  const projects: Project[] = [
-    {
-      id: '1',
-      title: t('projects.log01_title'),
-      tags: ['Jetson Nano', 'OpenCV', 'Mechanical Design'],
-      description: t('projects.log01_desc'),
-      imageUrl: 'https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      status: 'v.1.0.4',
-      statusColor: 'bg-neon-cyan'
-    },
-    {
-      id: '2',
-      title: t('projects.log02_title'),
-      tags: ['ROS', 'Geekom Mini PC', 'Full Assembly'],
-      description: t('projects.log02_desc'),
-      imageUrl: 'https://images.unsplash.com/photo-1535378433864-ed1c29bc06a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      status: 'CLASSIFIED',
-      statusColor: 'bg-neon-orange'
-    },
-    {
-      id: '3',
-      title: t('projects.log03_title'),
-      tags: ['Lathe/CNC', 'PLC', 'Operations'],
-      description: t('projects.log03_desc'),
-      imageUrl: 'https://images.unsplash.com/photo-1565439398868-2a2ec585c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      status: 'DEPLOYED',
-      statusColor: 'bg-neon-cyan'
-    }
-  ];
+  useEffect(() => {
+    // Load projects from translations.json based on current language
+    fetch('/translations.json')
+      .then(res => res.json())
+      .then(data => {
+        const currentLang = i18n.language as 'en' | 'tr';
+        const projectsData = data[currentLang].projects.items;
+        setProjects(projectsData);
+      });
+  }, [i18n.language]);
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" data-purpose="projects" id="projects">
       <div className="flex items-center justify-between mb-12">
-        <h3 className="text-2xl font-bold text-white tracking-widest border-l-4 border-neon-orange pl-4">{t('header.projects')}</h3>
-        <span className="text-xs text-neon-cyan font-mono hidden sm:block">Rendering Objects: {projects.length}</span>
+        <h3 className="text-2xl font-bold text-white tracking-widest border-l-4 border-neon-orange pl-4">{t('projects.title')}</h3>
+        <span className="text-xs text-neon-cyan font-mono hidden sm:block">{t('projects.rendering_count')}: {projects.length}</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -78,10 +61,21 @@ const Projects: React.FC = () => {
               <p className="text-sm text-gray-400 mb-6 flex-grow">
                 {project.description}
               </p>
-              <div className="mt-auto">
+              <div className="mt-auto flex items-center gap-4">
                 <a href="#" className="text-neon-orange text-sm hover:underline decoration-neon-orange underline-offset-4">
-                  &gt;&gt; ACCESS_DATA
+                  {t('projects.access_data')}
                 </a>
+                {project.videoUrl && (
+                  <a 
+                    href={project.videoUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-neon-cyan text-sm hover:text-white transition-colors border border-neon-cyan/30 hover:border-neon-cyan px-3 py-1 rounded"
+                  >
+                    <Youtube className="w-4 h-4" />
+                    <span>Watch Video</span>
+                  </a>
+                )}
               </div>
             </div>
           </motion.article>

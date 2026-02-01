@@ -1,47 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { LogEntry } from '../types';
+
+interface TimelineLog {
+  id: string;
+  title: string;
+  color: string;
+  dotColor: string;
+  border: string;
+}
 
 const Logs: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [logs, setLogs] = useState<TimelineLog[]>([]);
 
-  const logs = [
-    {
-      id: '5',
-      title: t('logs.step5'),
-      color: 'text-neon-cyan',
-      dotColor: 'bg-neon-cyan',
-      border: 'border-neon-cyan'
-    },
-    {
-      id: '4',
-      title: t('logs.step4'),
-      color: 'text-white',
-      dotColor: 'bg-white',
-      border: 'border-white'
-    },
-    {
-      id: '3',
-      title: t('logs.step3'),
-      color: 'text-white',
-      dotColor: 'bg-white',
-      border: 'border-white'
-    },
-    {
-      id: '2',
-      title: t('logs.step2'),
-      color: 'text-gray-400',
-      dotColor: 'bg-gray-500',
-      border: 'border-gray-500'
-    },
-    {
-      id: '1',
-      title: t('logs.step1'),
-      color: 'text-gray-500',
-      dotColor: 'bg-gray-600',
-      border: 'border-gray-600'
-    }
-  ];
+  useEffect(() => {
+    // Load logs from translations.json based on current language
+    fetch('/translations.json')
+      .then(res => res.json())
+      .then(data => {
+        const currentLang = i18n.language as 'en' | 'tr';
+        const logsData = data[currentLang].logs.items;
+        setLogs(logsData);
+      });
+  }, [i18n.language]);
 
   return (
     <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24" data-purpose="experience" id="logs">

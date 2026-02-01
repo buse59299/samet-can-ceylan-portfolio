@@ -9,9 +9,26 @@ const Gauge: React.FC<GaugeProps> = ({ percentage, label, color }) => {
   const [currentPercent, setCurrentPercent] = useState(0);
 
   useEffect(() => {
-    // Simple entry animation simulation
-    const timer = setTimeout(() => setCurrentPercent(percentage), 500);
-    return () => clearTimeout(timer);
+    // Smooth animation from 0 to target percentage
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = percentage / steps;
+    const stepDuration = duration / steps;
+    
+    let step = 0;
+    const interval = setInterval(() => {
+      step++;
+      setCurrentPercent(prev => {
+        const next = Math.min(increment * step, percentage);
+        if (next >= percentage) {
+          clearInterval(interval);
+          return percentage;
+        }
+        return next;
+      });
+    }, stepDuration);
+
+    return () => clearInterval(interval);
   }, [percentage]);
 
   const dashOffset = dashArray - (dashArray * (currentPercent / 100));
